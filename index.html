@@ -7,14 +7,17 @@
     <meta name="author" content=" FILL ME IN ">
     <title>Cameron Pittman: Portfolio</title>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script> 
-    <script> 
-      WebFont.load({
-        google: { 
-          families: ['Open Sans:400,700'] 
-        } 
-      }); 
+    <script>
+       WebFontConfig = {
+        google: { families: ['Open+Sans:400,700'] }
+       };
+
+       (function(d) {
+          var wf = d.createElement('script'), s = d.scripts[0];
+          wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+          wf.async = true;
+          s.parentNode.insertBefore(wf, s);
+       })(document);
     </script>
 
     <link href="css/style.css" rel="stylesheet">
@@ -40,7 +43,7 @@
     </header>
 
     <div class="container">
-      <div class="hero">
+        <div class="hero">
         <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
       </div>
 
@@ -60,7 +63,7 @@
 
           <li>
             <img src="https://lh5.ggpht.com/IKdCmTWn8a2nMhlwMYzryvzRN5CUZAOBr4tDrEAbszV7TIFe9pRAInA4kkYcgTXwrifJsBEsq1agTueuu-g=s100">
-            <a href="project-mobile.html">Mobile Web Development</a>
+              <a href="project-mobile.html">Mobile Web Development</a>
             <p>Making mobile apps isn't so hard after all.</p>
           </li>
 
